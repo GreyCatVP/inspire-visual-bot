@@ -1,7 +1,7 @@
 import telebot
 from ai_visual_helper import get_visual_inspiration
-
-TOKEN = '7284631406:AAFd2xoLp3vxCzc1uESqymgkT354jCGeLcA'
+import os
+TOKEN = os.environ.get('BOT_TOKEN')
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
